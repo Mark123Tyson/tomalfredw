@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #faf8f3;
+  color: #1a1a18;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ── RESPONSIVE GRID OVERRIDES ── */
+@media (max-width: 900px) {
+  .stats-grid       { grid-template-columns: 1fr !important; }
+  .about-grid       { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .expertise-grid   { grid-template-columns: repeat(2, 1fr) !important; }
+  .edu-grid         { grid-template-columns: 1fr !important; }
+  .countries-grid   { grid-template-columns: repeat(2, 1fr) !important; }
+  .community-grid   { grid-template-columns: 1fr !important; }
+  .contact-grid     { grid-template-columns: 1fr !important; }
+  .nav-desktop      { display: none !important; }
+  .nav-hamburger    { display: flex !important; }
+  .hero-section     { grid-template-columns: 1fr !important; }
+
+  /* Bigger section padding on tablet */
+  section           { padding: 80px 6vw !important; }
+}
+
+/* ── MOBILE TYPOGRAPHY ── */
+@media (max-width: 600px) {
+  .expertise-grid   { grid-template-columns: 1fr !important; }
+  .hero-cta         { flex-direction: column !important; align-items: stretch !important; }
+  .countries-grid   { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Base font bump */
+  body              { font-size: 17px; }
+
+  /* Section headings */
+  h2                { font-size: 34px !important; line-height: 1.2 !important; }
+
+  /* Lead paragraphs */
+  .section-lead     { font-size: 18px !important; }
+
+  /* Expertise cards */
+  .expertise-card-title { font-size: 20px !important; }
+  .expertise-card-desc  { font-size: 16px !important; }
+
+  /* Timeline */
+  .timeline-role    { font-size: 20px !important; }
+  .timeline-desc    { font-size: 16px !important; }
+
+  /* Education */
+  .edu-degree       { font-size: 19px !important; }
+
+  /* Contact cards */
+  .contact-val      { font-size: 17px !important; }
+
+  /* Community */
+  .community-title  { font-size: 18px !important; }
+  .community-desc   { font-size: 16px !important; }
+
+  /* Tighter section padding on mobile */
+  section           { padding: 64px 5vw !important; }
+
+  /* CTA buttons full-width on mobile */
+  .hero-cta a       { text-align: center !important; }
+}
+
+/* ── VERY SMALL DEVICES (≤ 380px) ── */
+@media (max-width: 380px) {
+  body              { font-size: 16px; }
+  h2                { font-size: 30px !important; }
+  section           { padding: 56px 4vw !important; }
+}
